@@ -1,42 +1,76 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* App container */
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+  color: #222;
+}
+
+/* Title */
+.title {
   text-align: center;
+  font-size: 2rem;
+  margin-bottom: 25px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
+/* General card style */
 .card {
-  padding: 2em;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
 }
 
-.read-the-docs {
-  color: #888;
+/* Button */
+.button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  
+  background-color: #4a7bf7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.button:hover {
+  background-color: #3c67d6;
+}
+
+/* Label */
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* Select */
+.select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Weather card special tweaks */
+.weather-card h2,
+.rec-card h2 {
+  margin-bottom: 10px;
+}
+
+/* List styling */
+ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 4px;
 }
