@@ -4,7 +4,11 @@
   margin: 40px auto;
   padding: 20px;
   font-family: "Inter", sans-serif;
-  color: #222;
+  color: #F8B55F;
+}
+
+body {
+  background-color: #3D365C;
 }
 
 /* Title */
@@ -16,7 +20,7 @@
 
 /* General card style */
 .card {
-  background: #ffffff;
+  background: #7C4585;
   padding: 20px;
   border-radius: 14px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -29,7 +33,7 @@
   padding: 12px;
   margin-top: 15px;
   
-  background-color: #4a7bf7;
+  background-color: #F8B55F;
   color: white;
   border: none;
   border-radius: 8px;
@@ -40,7 +44,7 @@
 }
 
 .button:hover {
-  background-color: #3c67d6;
+  background-color: #F8B55F;
 }
 
 /* Label */
@@ -55,8 +59,10 @@
   width: 100%;
   padding: 10px;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #ad9fc3;
   font-size: 1rem;
+  color: rgb(99, 87, 105);
+  background-color: antiquewhite;
 }
 
 /* Weather card special tweaks */
@@ -69,8 +75,10 @@
 ul {
   margin-top: 10px;
   padding-left: 20px;
+  display: inline;
 }
 
 li {
   margin-bottom: 4px;
+  display: inline;
 }
