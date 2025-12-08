@@ -14,11 +14,22 @@ function App() {
     try {
       const { lat, lon } = await getUserLocation();
       const data = await fetchWeather(lat, lon);
+
       setWeather(data);
 
       const rec = await fetch(
-        `http://localhost:8000/recommend?temp=${data.temperature}&feels_like=${data.feels_like}&wind=${data.wind_speed}&humidity=${data.humidity}&weather=${data.weather_main}&hour=${data.hour_local}&mode=${mode}`
+        `http://localhost:8000/recommend?` +
+          new URLSearchParams({
+            temp: data.temperature,
+            feels_like: data.feels_like,
+            wind: data.wind_speed,
+            humidity: data.humidity,
+            weather: data.weather_main,
+            hour: data.hour_local,
+            mode: mode,
+          })
       );
+
       const recJson = await rec.json();
       setRecommendation(recJson);
     } catch (err) {
@@ -51,11 +62,21 @@ function App() {
       {weather && (
         <div className="card weather-card">
           <h2>Počasie – {weather.city}</h2>
-          <p><b>Teplota:</b> {weather.temperature}°C</p>
-          <p><b>Pocitovo:</b> {weather.feels_like}°C</p>
-          <p><b>Vietor:</b> {(weather.wind_speed * 3.6).toFixed(1)} km/h</p>
-          <p><b>Vlhkosť:</b> {weather.humidity}%</p>
-          <p><b>Podmienky:</b> {weather.weather_main}</p>
+          <p>
+            <b>Teplota:</b> {weather.temperature}°C
+          </p>
+          <p>
+            <b>Pocitovo:</b> {weather.feels_like}°C
+          </p>
+          <p>
+            <b>Vietor:</b> {(weather.wind_speed * 3.6).toFixed(1)} km/h
+          </p>
+          <p>
+            <b>Vlhkosť:</b> {weather.humidity}%
+          </p>
+          <p>
+            <b>Podmienky:</b> {weather.weather_main}
+          </p>
         </div>
       )}
 
@@ -63,9 +84,15 @@ function App() {
         <div className="card rec-card">
           <h2>Doporučené oblečenie</h2>
 
-          <p><b>Real feel:</b> {recommendation.real_feel}°C</p>
-          <p><b>Vrch:</b> {recommendation.top}</p>
-          <p><b>Spodok:</b> {recommendation.bottom}</p>
+          <p>
+            <b>Real feel:</b> {recommendation.real_feel}°C
+          </p>
+          <p>
+            <b>Vrch:</b> {recommendation.top}
+          </p>
+          <p>
+            <b>Spodok:</b> {recommendation.bottom}
+          </p>
 
           {recommendation.layers.length > 0 && (
             <>

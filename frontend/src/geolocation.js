@@ -16,7 +16,18 @@ export async function getUserLocation() {
 }
 
 export async function fetchWeather(lat, lon) {
-  const res = await fetch(`http://localhost:8000/weather?lat=${lat}&lon=${lon}`);
-  const data = await res.json();
-  return data;
+  try {
+    const url = `http://localhost:8000/weather?lat=${lat}&lon=${lon}`;
+    const res = await fetch(url);
+
+    if (!res.ok) {
+      throw new Error("Request failed: " + res.status);
+    }
+
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    console.error("Weather API error:", error);
+    throw error;
+  }
 }
