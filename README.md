@@ -29,3 +29,5 @@ The recommendations are generated from a dataset of clothing items categorized b
 ## Author
 
 Student project focused on experimenting with **weather data, machine learning, and recommendation systems**.
+
+Made with love for my girlfriend ♥︎. 
