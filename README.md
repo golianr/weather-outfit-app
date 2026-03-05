@@ -22,9 +22,9 @@ The recommendations are generated from a dataset of clothing items categorized b
 ## Technologies
 
 - Python
-- Streamlit (frontend)
+- React (frontend)
 - Machine Learning for clothing classification
-- Fashion dataset with clothing images
+- Weather API
 
 ## Author
 
