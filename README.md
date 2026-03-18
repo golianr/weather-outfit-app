@@ -17,7 +17,7 @@ The app combines **weather data** with **style preferences** to suggest suitable
 2. The user selects their preferred clothing style.
 3. The system analyzes weather conditions and suggests an appropriate outfit.
 
-The recommendations are generated from a dataset of clothing items categorized by style, color, and weather suitability. :contentReference[oaicite:0]{index=0}
+The recommendations are generated from a dataset of clothing items categorized by style, color, and weather suitability.
 
 ## Technologies
 
