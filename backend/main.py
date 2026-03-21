@@ -17,10 +17,14 @@ app = FastAPI()
 # CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=[
+        "http://localhost:5173",
+        "https://wtw.up.railway.app",
+    ],
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # ===============================
 #   CACHE (10 minút)

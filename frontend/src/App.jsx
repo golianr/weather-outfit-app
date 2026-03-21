@@ -49,7 +49,7 @@ export default function App() {
       const data = await fetchWeather(lat, lon);
       setWeather(data);
 
-      const res = await fetch("http://localhost:8000/recommend", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL ?? "http://localhost:8000"}/recommend`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
