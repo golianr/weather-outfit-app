@@ -1,4 +1,9 @@
-root * /app/dist
-file_server
+{
+    auto_https off
+}
 
-try_files {path} /index.html
+:{$PORT} {
+    root * /app/dist
+    file_server
+    try_files {path} /index.html
+}
