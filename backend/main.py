@@ -19,11 +19,12 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://wtw.up.railway.app",
+        "https://wtwear.up.railway.app",
     ],
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 
 # ===============================
