@@ -86,12 +86,14 @@ export default function App() {
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
         html, body {
-          min-height: 100%;
-          /* warm off-white parchment background */
+          min-height: 100vh;
+          width: 100%;
           background: #f5f0e8;
           font-family: 'Jost', sans-serif;
           color: #2c2520;
           -webkit-font-smoothing: antialiased;
+          display: flex;
+          justify-content: center;
         }
 
         /* subtle texture overlay */
@@ -103,6 +105,14 @@ export default function App() {
             radial-gradient(ellipse 60% 50% at 85% 80%, rgba(140,165,140,0.15) 0%, transparent 55%),
             radial-gradient(ellipse 50% 40% at 50% 50%, rgba(200,185,160,0.1) 0%, transparent 70%);
           pointer-events: none;
+        }
+
+        #root {
+          width: 100%;
+          min-height: 100vh;
+          background: #f5f0e8;
+          display: flex;
+          justify-content: center;
         }
 
         .page {
